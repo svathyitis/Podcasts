@@ -7,13 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f4f0fc;
+      --bg: #ffffff;
       --text: #1c1c1e;
       --muted: #777;
       --border: #d9e1ec;
       --accent: #6a5799;
       --accent-hover: #8473c6;
-      --box-bg: #eae3f9;
+      --box-bg: #f4f0fc;
     }
     * {
       margin: 0;
@@ -83,7 +83,7 @@
       color: var(--muted);
       margin-bottom: 0.9rem;
     }
-    .talk-embed {
+    iframe.talk-embed {
       width: 100%;
       height: 215px;
       border: none;
@@ -121,54 +121,73 @@
   </svg>
 </div>
 
-<!-- Talks & Podcast Cards -->
+<!-- Talk Cards -->
 <div class="iphone-frame">
-  <h1>Talks & Videos</h1>
-  <h2>Find calm & clarity</h2>
-  <p class="subtitle">Listen in to heartful wisdom & experience</p>
-</div>
-
-<div class="iphone-frame">
-  <h1>Deep Reset</h1>
-  <h2>Effortless Meditation</h2>
-  <p class="subtitle">Simple breath-based entry into peace</p>
+  <h1>Breathe Better</h1>
+  <h2>Balance & Energy</h2>
+  <p class="subtitle">8 mins · Jul 2024</p>
   <iframe class="talk-embed" src="https://www.youtube.com/embed/yalvcTB4R4Y" allowfullscreen></iframe>
 </div>
-
 <div class="iphone-frame">
-  <h1>Short & Soothing</h1>
-  <h2>3-minute Reboot</h2>
-  <p class="subtitle">When time is short, but mind is loud</p>
+  <h1>Stillness Now</h1>
+  <h2>Mid-day Reset</h2>
+  <p class="subtitle">11 mins · Jul 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/KGw1nT4NmdM" allowfullscreen></iframe>
+</div>
+<div class="iphone-frame">
+  <h1>Go Within</h1>
+  <h2>Gentle Guidance</h2>
+  <p class="subtitle">10 mins · Jun 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/Bn9hOfvGRIQ" allowfullscreen></iframe>
+</div>
+<div class="iphone-frame">
+  <h1>Soothe the Mind</h1>
+  <h2>Healing Breath</h2>
+  <p class="subtitle">12 mins · Jun 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/bGETtdE88lM" allowfullscreen></iframe>
+</div>
+<div class="iphone-frame">
+  <h1>Quick Calm</h1>
+  <h2>Short & Deep</h2>
+  <p class="subtitle">6 mins · May 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/UQ2yEoC15wk" allowfullscreen></iframe>
+</div>
+<div class="iphone-frame">
+  <h1>Mini Pause</h1>
+  <h2>1-Min Zen</h2>
+  <p class="subtitle">1 min · May 2024</p>
   <iframe class="talk-embed" src="https://www.youtube.com/embed/P-zVnswxkyI" allowfullscreen></iframe>
 </div>
-
 <div class="iphone-frame">
-  <h1>In Conversation</h1>
-  <h2>Spiritual Journeys</h2>
-  <p class="subtitle">Stories, silence & awakening</p>
-  <a href="https://www.artofliving.app/wisdom/in-conversation-with-vishal-merani/115054" class="button" target="_blank">Listen on AOL App</a>
+  <h1>Reflect</h1>
+  <h2>Inner Inquiry</h2>
+  <p class="subtitle">9 mins · Apr 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/-7WPJXnvJmo" allowfullscreen></iframe>
 </div>
-
 <div class="iphone-frame">
-  <h1>Wisdom Stream</h1>
-  <h2>All Episodes</h2>
-  <p class="subtitle">Past sessions & reflections</p>
-  <a href="https://www.artofliving.app/all-episodes?id=103901" class="button" target="_blank">Browse All</a>
+  <h1>True You</h1>
+  <h2>Self Discovery</h2>
+  <p class="subtitle">14 mins · Apr 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/useIgKewTRg" allowfullscreen></iframe>
 </div>
-
 <div class="iphone-frame">
-  <h1>Podcasts</h1>
-  <h2>With Vishal Merani</h2>
-  <p class="subtitle">Curated talks & insights</p>
-  <a href="https://podcasts.vishalmerani.com/" class="button" target="_blank">🎧 Listen Now</a>
+  <h1>Relax & Heal</h1>
+  <h2>Guided Wind-down</h2>
+  <p class="subtitle">13 mins · Mar 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/kqqOPSGrsIU" allowfullscreen></iframe>
 </div>
-
-
-<!-- Card 7 - Image Only -->
-<div class="iphone-frame" style="padding: 0; border: none; box-shadow: none;">
-  <img src="vmpodcast.png" alt="Meditation Image" style="width: 100%; border-radius: 20px;"/>
-    
-  </div>
+<div class="iphone-frame">
+  <h1>Inner Silence</h1>
+  <h2>Evening Bliss</h2>
+  <p class="subtitle">15 mins · Feb 2024</p>
+  <iframe class="talk-embed" src="https://www.youtube.com/embed/NjUZ7yxwb8A" allowfullscreen></iframe>
+</div>
+<div class="iphone-frame">
+  <h1>Listen In</h1>
+  <h2>Program Series</h2>
+  <p class="subtitle">Ongoing · www.vishalmerani.com</p>
+  <a class="button" href="https://www.vishalmerani.com/" target="_blank">🎧 Explore Podcasts</a>
+</div>
 
 <script>
   const moonIcon = document.getElementById("moon-icon");
@@ -179,6 +198,5 @@
     moonIcon.style.transform = darkMode ? "rotate(180deg)" : "rotate(0deg)";
   });
 </script>
-
 </body>
 </html>
