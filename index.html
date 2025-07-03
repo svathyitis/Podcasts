@@ -61,34 +61,34 @@
       padding: 24px 22px;
       position: relative;
       overflow: hidden;
-
-      border: 2px solid transparent;
-      background-clip: padding-box;
+      z-index: 1;
     }
 
     .iphone-frame::before {
       content: "";
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      border-radius: 38px;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: inherit;
       padding: 2px;
       background: var(--neon-glow);
-      -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
       z-index: -1;
-      animation: subtlePulse 6s ease-in-out infinite;
+      opacity: 0.55;
+      animation: subtlePulse 5s ease-in-out infinite;
+    }
+
+    .iphone-frame.image-card::before {
+      display: none;
     }
 
     @keyframes subtlePulse {
-      0%, 100% { opacity: 0.25; }
-      50% { opacity: 0.5; }
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.7; }
     }
 
     h1 {
@@ -134,7 +134,7 @@
       background-color: var(--accent-hover);
     }
 
-    /* Fix for full bleed image card */
+    /* Full image card fix */
     .iphone-frame.image-card {
       padding: 0;
       background: none;
