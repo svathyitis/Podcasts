@@ -1,158 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishal Merani | Talks & Wisdom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Talks & Wisdom | Vishal Merani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #1a1a1a;
+      --bg: #1c1c1e;
+      --text: #eaeaea;
+      --muted: #aaa;
       --accent: #6a5799;
-      --accent-light: #8473c6;
-      --text-light: #eee;
-      --text-muted: #ccc;
-      --card-bg: #2c2b38;
-      --card-shadow: rgba(0,0,0,0.4);
+      --accent-hover: #8473c6;
+      --box-bg: #2c2c2e;
+      --border: #3a3a3c;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin:0; padding:20px;
-      background: var(--bg);
       font-family: 'Inter', sans-serif;
-      color: var(--text-light);
-      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px 16px;
     }
-    h1 { text-align:center; color: var(--accent); margin-bottom:1rem; }
-    .timeline {
-      position: relative;
-      padding: 40px 0;
-      width: 100%;
-    }
-    .timeline::before {
-      content:'';
-      position:absolute;
-      top:0; bottom:0;
-      left:50%;
-      width:4px;
-      background: var(--accent-light);
-      transform: translateX(-50%);
-    }
-    .item {
-      position: relative;
-      width: calc(50% - 40px);
-      margin-bottom: 60px;
-      padding:20px;
-      background: var(--card-bg);
-      box-shadow: 0 4px 15px var(--card-shadow);
-      border-radius:14px;
-    }
-    .item:nth-child(odd) { left:0; }
-    .item:nth-child(even) { left:calc(50% + 40px); }
-    .item .date {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom:6px;
-    }
-    .item h2 {
-      margin:0 0 8px;
-      font-size:1.1rem;
-      color: var(--accent-light);
-    }
-    .video, .link {
-      margin-top:10px;
-      border-radius:12px;
-      overflow:hidden;
-    }
-    .video iframe {
-      width:100%;
-      height:180px;
-    }
-    .link a {
-      display:inline-block;
+
+    h1 {
+      text-align: center;
       color: var(--accent);
-      text-decoration:underline;
-      margin-top:6px;
+      font-size: 1.6rem;
+      margin-bottom: 1.4rem;
     }
-    @media (max-width:768px) {
-      .timeline::before { left:20px; }
-      .item {
-        width: calc(100% - 80px);
-        left:40px !important;
-      }
+
+    .card {
+      background: var(--box-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 10px rgba(106, 87, 153, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      color: var(--accent-hover);
+      margin-bottom: 0.5rem;
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      margin-top: 0.75rem;
+    }
+
+    a.button:hover {
+      background-color: var(--accent-hover);
     }
   </style>
 </head>
 <body>
 
-  <h1>🌀 Wisdom Waves</h1>
-  <div class="timeline">
-    
-    <div class="item">
-      <div class="date">Jul 2025</div>
-      <h2>Lightness & Letting Go</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/yalvcTB4R4Y" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <h1>🌀 Vishal Merani | Talks & Wisdom</h1>
 
-    <div class="item">
-      <div class="date">Jun 2025</div>
-      <h2>World Meditation Day</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/KGw1nT4NmdM" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>🌿 Lightness & Letting Go</h2>
+    <div class="subtitle">Meditation workshop highlight</div>
+    <iframe src="https://www.youtube.com/embed/yalvcTB4R4Y" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">May 2025</div>
-      <h2>Unravel Stress Naturally</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/Bn9hOfvGRIQ" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>🧘 World Meditation Day</h2>
+    <div class="subtitle">Global celebration with deep breathwork</div>
+    <iframe src="https://www.youtube.com/embed/KGw1nT4NmdM" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">May 2025</div>
-      <h2>108 Mahamrityunjay Chant</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/bGETtdE88lM" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>💫 Unravel Stress Naturally</h2>
+    <div class="subtitle">Talk on anxiety relief tools</div>
+    <iframe src="https://www.youtube.com/embed/Bn9hOfvGRIQ" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Apr 2025</div>
-      <h2>Inner Peace Bytes</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/UQ2yEoC15wk" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>🔔 108 Mahamrityunjay Chants</h2>
+    <div class="subtitle">Sacred vibrations and chanting session</div>
+    <iframe src="https://www.youtube.com/embed/bGETtdE88lM" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Apr 2025</div>
-      <h2>Calm in 30s (Short)</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/P-zVnswxkyI" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>✨ Inner Peace Bytes</h2>
+    <div class="subtitle">Quick calm practices</div>
+    <iframe src="https://www.youtube.com/embed/UQ2yEoC15wk" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Mar 2025</div>
-      <h2>Why Meditate?</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/-7WPJXnvJmo" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>⚡ Calm in 30s (Short)</h2>
+    <div class="subtitle">One-minute meditation burst</div>
+    <iframe src="https://www.youtube.com/embed/P-zVnswxkyI" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Mar 2025</div>
-      <h2>Journey to Ashram</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/NjUZ7yxwb8A" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>🌕 Why Meditate?</h2>
+    <div class="subtitle">Q&A on meditation</div>
+    <iframe src="https://www.youtube.com/embed/-7WPJXnvJmo" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Feb 2025</div>
-      <h2>Q&A: Practical or Mystical</h2>
-      <div class="video"><iframe src="https://www.youtube.com/embed/useIgKewTRg" frameborder="0" allowfullscreen></iframe></div>
-    </div>
+  <div class="card">
+    <h2>🛤 Journey to the Ashram</h2>
+    <div class="subtitle">Glimpse of the spiritual center</div>
+    <iframe src="https://www.youtube.com/embed/NjUZ7yxwb8A" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Wise Wisdom</div>
-      <h2>In Conversation</h2>
-      <div class="link"><a href="https://www.artofliving.app/wisdom/in-conversation-with-vishal-merani/115054" target="_blank">Art of Living – In Conversation with Vishal</a></div>
-    </div>
+  <div class="card">
+    <h2>🧩 Practical or Mystical?</h2>
+    <div class="subtitle">Talk on Sahaj Samadhi & choices</div>
+    <iframe src="https://www.youtube.com/embed/useIgKewTRg" allowfullscreen></iframe>
+  </div>
 
-    <div class="item">
-      <div class="date">Podcast Archive</div>
-      <h2>All Episodes View</h2>
-      <div class="link"><a href="https://www.artofliving.app/all-episodes?id=103901" target="_blank">Art of Living – All Episodes</a></div>
-    </div>
+  <div class="card">
+    <h2>🎯 Pinpointing Clarity</h2>
+    <div class="subtitle">Breakthrough insights in life</div>
+    <iframe src="https://www.youtube.com/embed/kqqOPSGrsIU" allowfullscreen></iframe>
+  </div>
 
+  <div class="card">
+    <h2>🌌 Guru Purnima 2024</h2>
+    <div class="subtitle">Spiritual celebration recap</div>
+    <iframe src="https://www.youtube.com/embed/XWXJxwSWaRk" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <h2>🎙 In Conversation</h2>
+    <div class="subtitle">Wisdom interview with Vishal</div>
+    <a class="button" href="https://www.artofliving.app/wisdom/in-conversation-with-vishal-merani/115054" target="_blank">Watch on Art of Living</a>
+  </div>
+
+  <div class="card">
+    <h2>📚 Full Episode Archive</h2>
+    <div class="subtitle">Explore all past talks & reflections</div>
+    <a class="button" href="https://www.artofliving.app/all-episodes?id=103901" target="_blank">All Episodes</a>
   </div>
 
 </body>
