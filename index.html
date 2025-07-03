@@ -13,7 +13,7 @@
       --border: #d9e1ec;
       --accent: #6a5799;
       --accent-hover: #8473c6;
-      --box-bg: #ffffff;
+      --box-bg: #eae3f9;
     }
     * {
       margin: 0;
@@ -25,6 +25,17 @@
       background: var(--bg);
       color: var(--text);
       padding: 22px 14px;
+    }
+    .toggle-container {
+      display: flex;
+      justify-content: flex-end;
+      max-width: 390px;
+      margin: 0 auto 14px;
+    }
+    .toggle-container svg {
+      cursor: pointer;
+      stroke: var(--accent);
+      transition: transform 0.3s ease;
     }
     .iphone-frame {
       background: var(--box-bg);
@@ -54,7 +65,7 @@
       animation: subtlePulse 6s ease-in-out infinite;
     }
     @keyframes subtlePulse {
-      0%, 100 { opacity: 0.2; }
+      0%, 100% { opacity: 0.2; }
       50% { opacity: 0.4; }
     }
     h1 {
@@ -104,95 +115,63 @@
   </style>
 </head>
 <body>
+<div class="toggle-container">
+  <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+    <path d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14.58A9 9 0 0021 12.79z" stroke="currentColor"/>
+  </svg>
+</div>
 
-<!-- Card for each talk -->
+<!-- Talks & Podcast Cards -->
 <div class="iphone-frame">
-  <h1>Talk: Bliss</h1>
-  <h2>"From Noise to Nectar"</h2>
-  <p class="subtitle">How to meditate in chaotic modern life</p>
+  <h1>Talks & Videos</h1>
+  <h2>Find calm & clarity</h2>
+  <p class="subtitle">Listen in to heartful wisdom & experience</p>
+</div>
+
+<div class="iphone-frame">
+  <h1>Deep Reset</h1>
+  <h2>Effortless Meditation</h2>
+  <p class="subtitle">Simple breath-based entry into peace</p>
   <iframe class="talk-embed" src="https://www.youtube.com/embed/yalvcTB4R4Y" allowfullscreen></iframe>
 </div>
 
 <div class="iphone-frame">
-  <h1>Talk: Balance</h1>
-  <h2>"Stress & Stillness"</h2>
-  <p class="subtitle">Anchoring your mind when it races</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/KGw1nT4NmdM" allowfullscreen></iframe>
-</div>
-
-<div class="iphone-frame">
-  <h1>Talk: Clarity</h1>
-  <h2>"Stuck? Start Here"</h2>
-  <p class="subtitle">Meditation as a restart button</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/Bn9hOfvGRIQ" allowfullscreen></iframe>
-</div>
-
-<div class="iphone-frame">
-  <h1>Talk: Flow</h1>
-  <h2>"Letting Go"</h2>
-  <p class="subtitle">Guided breath and surrender</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/bGETtdE88lM" allowfullscreen></iframe>
-</div>
-
-<div class="iphone-frame">
-  <h1>Short: Energy</h1>
-  <h2>"Mind ⮕ Prana Hack"</h2>
-  <p class="subtitle">Simple energy management tip</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/UQ2yEoC15wk" allowfullscreen></iframe>
-</div>
-
-<div class="iphone-frame">
-  <h1>Short: Now</h1>
-  <h2>"Instant Stillness"</h2>
-  <p class="subtitle">Short practice for attention shift</p>
+  <h1>Short & Soothing</h1>
+  <h2>3-minute Reboot</h2>
+  <p class="subtitle">When time is short, but mind is loud</p>
   <iframe class="talk-embed" src="https://www.youtube.com/embed/P-zVnswxkyI" allowfullscreen></iframe>
 </div>
 
 <div class="iphone-frame">
-  <h1>Talk: Vision</h1>
-  <h2>"Purposeful Silence"</h2>
-  <p class="subtitle">Using quiet time for insight</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/-7WPJXnvJmo" allowfullscreen></iframe>
+  <h1>In Conversation</h1>
+  <h2>Spiritual Journeys</h2>
+  <p class="subtitle">Stories, silence & awakening</p>
+  <a href="https://www.artofliving.app/wisdom/in-conversation-with-vishal-merani/115054" class="button" target="_blank">Listen on AOL App</a>
 </div>
 
 <div class="iphone-frame">
-  <h1>Talk: Ease</h1>
-  <h2>"Breath & Being"</h2>
-  <p class="subtitle">How breath affects emotion</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/useIgKewTRg" allowfullscreen></iframe>
+  <h1>Wisdom Stream</h1>
+  <h2>All Episodes</h2>
+  <p class="subtitle">Past sessions & reflections</p>
+  <a href="https://www.artofliving.app/all-episodes?id=103901" class="button" target="_blank">Browse All</a>
 </div>
 
 <div class="iphone-frame">
-  <h1>Talk: Power</h1>
-  <h2>"Silence is Super"</h2>
-  <p class="subtitle">Recharging with meditation</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/kqqOPSGrsIU" allowfullscreen></iframe>
+  <h1>Podcasts</h1>
+  <h2>With Vishal Merani</h2>
+  <p class="subtitle">Curated talks & insights</p>
+  <a href="https://podcasts.vishalmerani.com/" class="button" target="_blank">🎧 Listen Now</a>
 </div>
 
-<div class="iphone-frame">
-  <h1>Talk: Self</h1>
-  <h2>"You are the Answer"</h2>
-  <p class="subtitle">Conversation with Vishal Merani</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/NjUZ7yxwb8A" allowfullscreen></iframe>
-</div>
-
-<div class="iphone-frame">
-  <h1>Wisdom</h1>
-  <h2>"Conversation Series"</h2>
-  <p class="subtitle">with Vishal Merani on Art of Living App</p>
-  <a class="button" href="https://www.artofliving.app/wisdom/in-conversation-with-vishal-merani/115054" target="_blank">Watch on AoL App</a>
-</div>
-
-<div class="iphone-frame">
-  <h1>All Episodes</h1>
-  <h2>Art of Living</h2>
-  <p class="subtitle">Guided sessions and conversations</p>
-  <a class="button" href="https://www.artofliving.app/all-episodes?id=103901" target="_blank">Explore All Talks</a>
-</div>
-
-<div class="iphone-frame" style="padding: 0; border: none; box-shadow: none;">
-  <img src="zenvm.png" alt="Meditation Image" style="width: 100%; border-radius: 20px;"/>
-</div>
+<script>
+  const moonIcon = document.getElementById("moon-icon");
+  let darkMode = false;
+  moonIcon.addEventListener("click", () => {
+    darkMode = !darkMode;
+    document.body.classList.toggle("dark", darkMode);
+    moonIcon.style.transform = darkMode ? "rotate(180deg)" : "rotate(0deg)";
+  });
+</script>
 
 </body>
 </html>
