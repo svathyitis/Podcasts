@@ -37,33 +37,31 @@
       stroke: var(--accent);
       transition: transform 0.3s ease;
     }
-    .iphone-frame {
-      background: var(--box-bg);
-      border-radius: 36px;
-      max-width: 390px;
-      width: 100%;
-      margin: 0 auto 32px auto;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-      padding: 24px 22px;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    .iphone-frame::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      border-radius: 36px;
-      pointer-events: none;
-      z-index: -1;
-      border: 1.5px solid transparent;
-      background: linear-gradient(135deg, #9089f5, #f093fb, #9089f5) border-box;
-      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      -webkit-mask-composite: destination-out;
-      animation: subtlePulse 6s ease-in-out infinite;
-    }
+
+.iphone-frame {
+  background: #ffffff; /* white background */
+  border-radius: 36px;
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto 32px auto;
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+
+  /* NEON PURPLE BORDER + glow effect */
+  border: 3px solid #a277f4;
+  box-shadow:
+    0 0 12px rgba(162, 119, 244, 0.6),
+    0 0 24px rgba(162, 119, 244, 0.4);
+}
+
+body.dark .iphone-frame {
+  border-color: #c3afff;
+  box-shadow:
+    0 0 14px rgba(195, 175, 255, 0.6),
+    0 0 28px rgba(195, 175, 255, 0.4);
+}
+
     @keyframes subtlePulse {
       0%, 100% { opacity: 0.2; }
       50% { opacity: 0.4; }
@@ -125,6 +123,7 @@
 <div class="iphone-frame" style="padding: 0; border: none; box-shadow: none;">
   <img src="VMPodcast.png" alt="Meditation Image" style="width: 100%; border-radius: 20px;"/> 
   </div>
+
 
 <!-- Talk Cards -->
 <div class="iphone-frame">
