@@ -13,74 +13,81 @@
       --border: #d9e1ec;
       --accent: #6a5799;
       --accent-hover: #8473c6;
-      --box-bg: #f4f0fc;
+      --box-bg: #ffffff;
+      --card-border: #a277f4;
+      --card-glow: rgba(162, 119, 244, 0.5);
     }
+
+    body.dark {
+      --bg: #1c1c1e;
+      --text: #e0e0e0;
+      --muted: #aaa;
+      --border: #444;
+      --box-bg: #2c2c2e;
+      --card-border: #c3afff;
+      --card-glow: rgba(195, 175, 255, 0.4);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       padding: 22px 14px;
     }
+
     .toggle-container {
       display: flex;
       justify-content: flex-end;
       max-width: 390px;
       margin: 0 auto 14px;
     }
+
     .toggle-container svg {
       cursor: pointer;
       stroke: var(--accent);
       transition: transform 0.3s ease;
     }
 
-.iphone-frame {
-  background: #ffffff; /* white background */
-  border-radius: 36px;
-  max-width: 390px;
-  width: 100%;
-  margin: 0 auto 32px auto;
-  padding: 24px 22px;
-  position: relative;
-  overflow: hidden;
+    .iphone-frame {
+      background: var(--box-bg);
+      border-radius: 36px;
+      max-width: 390px;
+      width: 100%;
+      margin: 0 auto 32px auto;
+      padding: 24px 22px;
+      position: relative;
+      overflow: hidden;
 
-  /* NEON PURPLE BORDER + glow effect */
-  border: 3px solid #a277f4;
-  box-shadow:
-    0 0 12px rgba(162, 119, 244, 0.6),
-    0 0 24px rgba(162, 119, 244, 0.4);
-}
-
-body.dark .iphone-frame {
-  border-color: #c3afff;
-  box-shadow:
-    0 0 14px rgba(195, 175, 255, 0.6),
-    0 0 28px rgba(195, 175, 255, 0.4);
-}
-
-    @keyframes subtlePulse {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 0.4; }
+      border: 2px solid var(--card-border);
+      box-shadow:
+        0 0 10px var(--card-glow),
+        0 0 20px var(--card-glow);
     }
+
     h1 {
       font-size: 1.4rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
     }
+
     h2 {
       font-size: 1.2rem;
       font-weight: 500;
       margin-bottom: 0.6rem;
     }
+
     .subtitle {
       font-size: 0.85rem;
       color: var(--muted);
       margin-bottom: 0.9rem;
     }
+
     iframe.talk-embed {
       width: 100%;
       height: 215px;
@@ -89,6 +96,7 @@ body.dark .iphone-frame {
       margin-bottom: 1rem;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+
     .button {
       display: inline-block;
       background-color: var(--accent);
@@ -100,108 +108,101 @@ body.dark .iphone-frame {
       font-weight: 500;
       transition: background 0.2s ease;
     }
+
     .button:hover {
       background-color: var(--accent-hover);
     }
-    body.dark {
-      --bg: #1c1c1e;
-      --text: #e0e0e0;
-      --muted: #aaa;
-      --border: #444;
-      --box-bg: #2c2c2e;
-    }
+
   </style>
 </head>
 <body>
-<div class="toggle-container">
-  <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-    <path d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14.58A9 9 0 0021 12.79z" stroke="currentColor"/>
-  </svg>
-</div>
-
-<!-- Card 7 - Image Only -->
-<div class="iphone-frame" style="padding: 0; border: none; box-shadow: none;">
-  <img src="VMPodcast.png" alt="Meditation Image" style="width: 100%; border-radius: 20px;"/> 
+  <div class="toggle-container">
+    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+      <path d="M21 12.79A9 9 0 0112.21 3a7 7 0 100 14.58A9 9 0 0021 12.79z" stroke="currentColor"/>
+    </svg>
   </div>
 
+  <!-- Card 7 - Image Only -->
+  <div class="iphone-frame" style="padding: 0;">
+    <img src="VMPodcast.png" alt="Meditation Image" style="width: 100%; border-radius: 20px;"/> 
+  </div>
 
-<!-- Talk Cards -->
-<div class="iphone-frame">
-  <h1>Breathe Better</h1>
-  <h2>Balance & Energy</h2>
-  <p class="subtitle">8 mins · Jul 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/yalvcTB4R4Y" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Stillness Now</h1>
-  <h2>Mid-day Reset</h2>
-  <p class="subtitle">11 mins · Jul 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/KGw1nT4NmdM" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Go Within</h1>
-  <h2>Gentle Guidance</h2>
-  <p class="subtitle">10 mins · Jun 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/Bn9hOfvGRIQ" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Soothe the Mind</h1>
-  <h2>Healing Breath</h2>
-  <p class="subtitle">12 mins · Jun 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/bGETtdE88lM" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Quick Calm</h1>
-  <h2>Short & Deep</h2>
-  <p class="subtitle">6 mins · May 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/UQ2yEoC15wk" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Mini Pause</h1>
-  <h2>1-Min Zen</h2>
-  <p class="subtitle">1 min · May 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/P-zVnswxkyI" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Reflect</h1>
-  <h2>Inner Inquiry</h2>
-  <p class="subtitle">9 mins · Apr 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/-7WPJXnvJmo" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>True You</h1>
-  <h2>Self Discovery</h2>
-  <p class="subtitle">14 mins · Apr 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/useIgKewTRg" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Relax & Heal</h1>
-  <h2>Guided Wind-down</h2>
-  <p class="subtitle">13 mins · Mar 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/kqqOPSGrsIU" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Inner Silence</h1>
-  <h2>Evening Bliss</h2>
-  <p class="subtitle">15 mins · Feb 2024</p>
-  <iframe class="talk-embed" src="https://www.youtube.com/embed/NjUZ7yxwb8A" allowfullscreen></iframe>
-</div>
-<div class="iphone-frame">
-  <h1>Dive In for more </h1>
-  <h2>Program Series</h2>
-  <p class="subtitle">Ongoing · www.vishalmerani.com</p>
-  <a class="button" href="https://www.vishalmerani.com/" target="_blank"> 🕵 Explore Programs</a>
-</div>
+  <!-- Talk Cards -->
+  <div class="iphone-frame">
+    <h1>Breathe Better</h1>
+    <h2>Balance & Energy</h2>
+    <p class="subtitle">8 mins · Jul 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/yalvcTB4R4Y" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Stillness Now</h1>
+    <h2>Mid-day Reset</h2>
+    <p class="subtitle">11 mins · Jul 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/KGw1nT4NmdM" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Go Within</h1>
+    <h2>Gentle Guidance</h2>
+    <p class="subtitle">10 mins · Jun 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/Bn9hOfvGRIQ" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Soothe the Mind</h1>
+    <h2>Healing Breath</h2>
+    <p class="subtitle">12 mins · Jun 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/bGETtdE88lM" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Quick Calm</h1>
+    <h2>Short & Deep</h2>
+    <p class="subtitle">6 mins · May 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/UQ2yEoC15wk" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Mini Pause</h1>
+    <h2>1-Min Zen</h2>
+    <p class="subtitle">1 min · May 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/P-zVnswxkyI" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Reflect</h1>
+    <h2>Inner Inquiry</h2>
+    <p class="subtitle">9 mins · Apr 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/-7WPJXnvJmo" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>True You</h1>
+    <h2>Self Discovery</h2>
+    <p class="subtitle">14 mins · Apr 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/useIgKewTRg" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Relax & Heal</h1>
+    <h2>Guided Wind-down</h2>
+    <p class="subtitle">13 mins · Mar 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/kqqOPSGrsIU" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Inner Silence</h1>
+    <h2>Evening Bliss</h2>
+    <p class="subtitle">15 mins · Feb 2024</p>
+    <iframe class="talk-embed" src="https://www.youtube.com/embed/NjUZ7yxwb8A" allowfullscreen></iframe>
+  </div>
+  <div class="iphone-frame">
+    <h1>Dive In for more </h1>
+    <h2>Program Series</h2>
+    <p class="subtitle">Ongoing · www.vishalmerani.com</p>
+    <a class="button" href="https://www.vishalmerani.com/" target="_blank"> 🕵 Explore Programs</a>
+  </div>
 
-
-<script>
-  const moonIcon = document.getElementById("moon-icon");
-  let darkMode = false;
-  moonIcon.addEventListener("click", () => {
-    darkMode = !darkMode;
-    document.body.classList.toggle("dark", darkMode);
-    moonIcon.style.transform = darkMode ? "rotate(180deg)" : "rotate(0deg)";
-  });
-</script>
+  <script>
+    const moonIcon = document.getElementById("moon-icon");
+    let darkMode = false;
+    moonIcon.addEventListener("click", () => {
+      darkMode = !darkMode;
+      document.body.classList.toggle("dark", darkMode);
+      moonIcon.style.transform = darkMode ? "rotate(180deg)" : "rotate(0deg)";
+    });
+  </script>
 </body>
 </html>
