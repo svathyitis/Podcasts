@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishal Merani | Talks & Podcasts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --text: #1c1c1e;
+      --muted: #777;
+      --border: #d9e1ec;
+      --accent: #6a5799;
+      --accent-hover: #8473c6;
+      --box-bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 22px 14px;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+    }
+
+    .iphone-frame {
+      background: var(--box-bg);
+      border-radius: 36px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .iphone-frame::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 36px;
+      pointer-events: none;
+      z-index: -1;
+      border: 1.5px solid transparent;
+      background: linear-gradient(135deg, #9089f5, #f093fb, #9089f5) border-box;
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.4; }
+    }
+
+    h1, h2 {
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .video, .audio {
+      width: 100%;
+      border-radius: 14px;
+      margin: 14px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    .button:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .footer {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    body.dark {
+      --bg: #1c1c1e;
+      --text: #e0e0e0;
+      --muted: #aaa;
+      --border: #444;
+      --box-bg: #2c2c2e;
+    }
+
+    body.dark .button {
+      color: #1c1c1e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="iphone-frame">
+      <h1>🎙️ Recent Talk</h1>
+      <h2>Peace in Chaos</h2>
+      <p class="subtitle">A conversation on breath, presence & life</p>
+      <iframe class="video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      <a class="button" href="https://www.youtube.com/@yourchannel" target="_blank">More Talks on YouTube</a>
+    </div>
+
+    <div class="iphone-frame">
+      <h1>🎧 Podcast Feature</h1>
+      <h2>Inner Calm | Ep. 12</h2>
+      <p class="subtitle">Listen in on Spotify or Apple</p>
+      <audio class="audio" controls>
+        <source src="your-podcast-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <a class="button" href="https://open.spotify.com/show/yourpodcast" target="_blank">Listen on Spotify</a>
+    </div>
+
+    <div class="iphone-frame">
+      <h1>📺 Insight Drop</h1>
+      <h2>2-min Wisdom Series</h2>
+      <p class="subtitle">Quick reflections to reset your day</p>
+      <iframe class="video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="footer">
+      ♡ Breathe. Reflect. Repeat. <br>
+      ॐ Jai Guru Dev ॐ
+    </div>
+  </div>
+</body>
+</html>
